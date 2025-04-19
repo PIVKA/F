@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мониторинг системы</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Системный мониторинг</title>
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <h1>Мониторинг системы</h1>
-    <div id="metrics-container"></div>
-    
-    <script src="script.js"></script>
+    <div class="dashboard">
+        <h1>Мониторинг системы</h1>
+        
+        <div class="metrics-grid">
+            <div class="metric-card cpu">
+                <h2>Центральный процессор</h2>
+                <div class="metric-value" id="cpu-usage">--%</div>
+                <div class="metric-sub">Температура: <span id="cpu-temp">--</span>°C</div>
+            </div>
+            
+            <div class="metric-card ram">
+                <h2>Оперативная память</h2>
+                <div class="metric-value" id="ram-usage">--%</div>
+                <div class="metric-sub">
+                    <span id="ram-used">--</span> MB / <span id="ram-total">--</span> MB
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="usage-chart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
