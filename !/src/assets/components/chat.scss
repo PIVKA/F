@@ -1,0 +1,25 @@
+.list-group-item{
+    background: $blue !important;
+    margin: 20px 0;
+    border-radius: 15px !important;
+    transition: all .25s ease;
+    cursor: pointer;
+    .me-auto{
+        display: flex;
+        column-gap: 35px;
+        img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    .badge{
+        font-size: 18px;
+    }
+}
+
+.list-group-item:hover{
+    transform: scale(1.05);
+}
+

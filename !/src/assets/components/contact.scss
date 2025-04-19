@@ -1,0 +1,29 @@
+.list-group_contact{
+    background: $blue !important;
+    margin: 20px 0;
+    border-radius: 15px !important;
+    transition: all .25s ease;
+    cursor: pointer;
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 5%;
+    }
+    li, i{
+        font-size: 35px;
+    }
+    li:first-child{
+        min-width: 20%;
+    }
+    li:last-child{
+        display: flex;
+        column-gap: 15%;
+        min-width: 15%;
+    }
+}
+
+.list-group-item_contact:hover {
+    transform: scale(1)
+}

@@ -1,0 +1,78 @@
+.dialog-window{
+    background: $blue;
+    height: 70vh;
+    width: 55vw;
+    border-radius: 15px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    textarea::-webkit-input-placeholder{
+        color: $yellow !important;
+    } 
+    textarea{
+        resize: none;
+    }
+    .form-floating{
+        .btn-group{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .btn{
+                border-radius: 10px !important;
+                margin-right: 70px;
+            }
+            .btn:not(:first-child){
+                margin-top: 10px;
+            }
+        }
+    }
+    .dialog-message{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+        margin-bottom: 20px;
+        .message{
+            padding: 30px;
+            border-radius: 15px;
+            background: white;
+            margin-bottom: 20px;
+            max-width: 70%;
+            word-break: break-all;
+        }
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+    }
+
+}
+
+.dialog-board{
+    background: $blue;
+    height: 70vh;
+    width: 23vw;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 30px;
+    li{
+        list-style: none;
+        font-size: 40px;
+        cursor: pointer;
+        transition: all .5s ease;
+        margin: 7px;
+    }
+    li:hover{
+        transform: scale(1.5);
+    }
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+}
